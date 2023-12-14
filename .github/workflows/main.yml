@@ -5,6 +5,8 @@ jobs:
     env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: codfish/semantic-release-action@v3
