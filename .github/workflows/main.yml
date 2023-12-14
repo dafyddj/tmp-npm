@@ -1,0 +1,11 @@
+on: push
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: codfish/semantic-release-action@v3
+  
